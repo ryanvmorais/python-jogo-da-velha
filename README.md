@@ -1,4 +1,4 @@
-# 🚀 Tic Tac Toe em Python (Jogo da Velha)
+# 🚀 Jogo da Velha em Python (Tic Tac Toe)
 
 Um clássico Jogo da Velha desenvolvido em Python para rodar diretamente no terminal ou em qualquer IDE, focado em lógica de programação e manipulação de matrizes.
 
