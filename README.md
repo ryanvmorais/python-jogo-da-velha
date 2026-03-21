@@ -28,5 +28,9 @@ Para garantir que o jogo funcione corretamente, certifique-se de ter os seguinte
    git clone https://github.com/ryanvmorais/python-jogo-da-velha.git
 
 2. **Execute o script:**
-- **Para o Script (.py):** Use o PyCharm ou Terminal (python main.py).
+- **Para o Script (.py):** Use o PyCharm ou Terminal (`python main.py`).
 - **Para o Notebook (.ipynb):** Use o JupyterLab ou VS Code (com a extensão Jupyter).
+
+## ⚖️ Licença
+
+Este projeto está sob a **Licença MIT**. Isso significa que você pode usar, copiar e modificar o código à vontade, inclusive para seus próprios projetos, desde que mantenha os créditos originais. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE).
