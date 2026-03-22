@@ -1,0 +1,50 @@
+# --- AMBIENTES VIRTUAIS E DEPENDÊNCIAS ---
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.python-version
+
+# JavaScript / Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# --- SEGURANÇA E PRIVACIDADE (EXTREMAMENTE IMPORTANTE) ---
+# Arquivos de variáveis de ambiente (onde ficam suas senhas/tokens)
+.env
+.env.local
+.env.*.local
+config.json
+secrets.txt
+
+# Arquivos de backup e logs de ferramentas de scan
+*.log
+*.bak
+*.swp
+reports/
+scans/
+
+# --- ARQUIVOS DE SISTEMA E IDEs ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- COMPILADOS E BINÁRIOS ---
+# C e C++
+*.o
+*.obj
+*.exe
+*.out
+
+# Java
+*.class
+*.jar
+*.war
+build/
+target/
