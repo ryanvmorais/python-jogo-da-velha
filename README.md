@@ -45,19 +45,16 @@ Para garantir que o jogo funcione corretamente, certifique-se de ter os seguinte
 - **Para o Script (.py):** Use o PyCharm ou Terminal (`python main.py`).
 - **Para o Notebook (.ipynb):** Use o JupyterLab ou VS Code (com a extensão Jupyter).
 
----
 
-## 📋 Desafio para você (Prática):
+## 📋 Atividade para praticar:
 
-Para exercitar o que aprendeu no vídeo, tente modificar o código e implementar estas novas funcionalidades:
+Para exercitar o que aprendeu, tente modificar o código e implementar estas novas funcionalidades:
 
 1. **🏆 Placar:** Crie variáveis para armazenar e exibir um contador de vitórias para cada jogador.
 2. **🤖 Modo Single Player:** Desenvolva uma lógica simples (usando a biblioteca `random`) para o computador jogar contra você.
 3. **🎨 Cores no Terminal:** Utilize bibliotecas como `colorama` para destacar o **"X"** e o **"O"** com cores diferentes, tornando o jogo mais visual.
 
----
-
-### 💡 Ficou com alguma dúvida ou tem sugestões?
+## 💡 Ficou com alguma dúvida ou tem sugestões?
 
 Aprender algo novo tem seus desafios, mas estou aqui para caminharmos juntos! Se você encontrou algum erro, teve dificuldade em rodar o jogo ou pensou em uma funcionalidade incrível para adicionar:
 
@@ -65,8 +62,6 @@ Aprender algo novo tem seus desafios, mas estou aqui para caminharmos juntos! Se
 *   **Me mande um E-mail:** Se preferir algo mais privado, pode me escrever em [**contato@ryanmorais.com.br**](mailto:contato@ryanmorais.com.br).
 
 Ficarei muito feliz em ver seu progresso e receber seu feedback para melhorar cada vez mais nossos materiais de estudo! 🤝
-
----
 
 ## ⚖️ Licença
 
