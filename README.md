@@ -25,7 +25,7 @@ Para facilitar o seu aprendizado, disponibilizei o código em dois formatos:
 | **Jupyter Notebook** | Versão interativa (`.ipynb`) para estudo e execução célula a célula. | ![Jupyter Notebook Interativo](https://img.shields.io/badge/JupyterLab-jupyter?style=flat&logo=jupyter&logoColor=F37626&color=F0F0F0) |
 | **PyCharm / VS Code** | IDEs recomendadas para edição, depuração e refatoração do código. | ![PyCharm](https://img.shields.io/badge/PyCharm-pycharm?style=flat&logo=pycharm&logoColor=000000&color=F0F0F0) |
 
-## 💻 Requisitos Mínimos:
+## ✅ Requisitos Mínimos:
 
 Para garantir que o jogo funcione corretamente, certifique-se de ter os seguintes itens instalados:
 
@@ -54,6 +54,17 @@ Para exercitar o que aprendeu no vídeo, tente modificar o código e implementar
 1. **🏆 Placar:** Crie variáveis para armazenar e exibir um contador de vitórias para cada jogador.
 2. **🤖 Modo Single Player:** Desenvolva uma lógica simples (usando a biblioteca `random`) para o computador jogar contra você.
 3. **🎨 Cores no Terminal:** Utilize bibliotecas como `colorama` para destacar o **"X"** e o **"O"** com cores diferentes, tornando o jogo mais visual.
+
+---
+
+### 💡 Ficou com alguma dúvida ou tem sugestões?
+
+Aprender algo novo tem seus desafios, mas estou aqui para caminharmos juntos! Se você encontrou algum erro, teve dificuldade em rodar o jogo ou pensou em uma funcionalidade incrível para adicionar:
+
+*   **Abra uma [Issue](https://github.com/ryanvmorais/python-jogo-da-velha/issues):** Clique no link e descreva sua dúvida ou sugestão. É a melhor forma de trocarmos conhecimento e ajudarmos outras pessoas que tenham a mesma dúvida!
+*   **Me mande um E-mail:** Se preferir algo mais privado, pode me escrever em [**contato@ryanmorais.com.br**](mailto:contato@ryanmorais.com.br).
+
+Ficarei muito feliz em ver seu progresso e receber seu feedback para melhorar cada vez mais nossos materiais de estudo! 🤝
 
 ---
 
