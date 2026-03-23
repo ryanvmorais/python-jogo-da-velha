@@ -1,3 +1,5 @@
+![Jogo da Velha em Python - Lógica de Programação e Matrizes](assets/jogo-da-velha-python-logica-programacao.png)
+
 # 🎮 Jogo da Velha em Python | Exercício de Lógica de Programação
 
 Este repositório contém um **Jogo da Velha (Tic Tac Toe)** desenvolvido em Python, projetado especificamente como um material de estudo para desenvolvedores iniciantes. O foco principal é a aplicação prática de **fundamentos da programação** e manipulação de matrizes no terminal.
