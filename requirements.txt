@@ -1,0 +1,10 @@
+# ---------------------------------------------------------
+# DEPENDENCIAS DO PROJETO: JOGO DA VELHA
+# ---------------------------------------------------------
+# Este projeto utiliza exclusivamente a Biblioteca Padrao 
+# do Python (Standard Library), como: 'random' e 'os'.
+#
+# Nao e necessario instalar pacotes externos via pip.
+# ---------------------------------------------------------
+# Para rodar o jogo: python main.py
+
