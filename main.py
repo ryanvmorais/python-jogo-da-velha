@@ -1,3 +1,15 @@
+"""
+❌⭕ PROJETO: JOGO DA VELHA (TIC-TAC-TOE)
+🎯 Objetivo: Educacional - Prática de Lógica, Matrizes e Orientação a Objetos.
+
+ESTRUTURA DO CÓDIGO (BASEADA EM CLASSE):
+1. INICIALIZAÇÃO (__init__): Onde o tabuleiro 'limpo' é criado.
+2. INTERFACE (exibir_tabuleiro): Como o jogo aparece no terminal (Limpeza de tela e Grid).
+3. REGRAS DE VITÓRIA (verificar_vitoria_ou_empate): A lógica matemática que analisa linhas, colunas e diagonais.
+4. AGENTES (usuário vs máquina): As funções que gerenciam as jogadas de cada um.
+5. LOOP PRINCIPAL: O controle da partida e a opção de jogar novamente (Replay).
+"""
+
 import random
 import subprocess
 import os
