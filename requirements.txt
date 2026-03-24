@@ -7,4 +7,3 @@
 # Nao e necessario instalar pacotes externos via pip.
 # ---------------------------------------------------------
 # Para rodar o jogo: python main.py
-
