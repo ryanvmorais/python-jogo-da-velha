@@ -71,7 +71,13 @@ Para garantir que o jogo funcione corretamente, certifique-se de ter os seguinte
 
 Para exercitar o que aprendeu, tente modificar o código e implementar estas novas funcionalidades:
 
-1. **🏆 Placar:** Crie variáveis para armazenar e exibir um contador de vitórias acumuladas.
+1. **🏆  Placar Acumulado (Gerenciamento de Estado):**
+
+O desafio é criar um contador que não zere ao reiniciar uma partida.
+   * **O Conceito:** Aprenda a diferenciar variáveis que controlam a **rodada** das que controlam o **histórico do jogador**.
+   * **A Lógica:** Implemente variáveis de controle (ex: `vitorias_x` e `vitorias_o`) que persistam enquanto o programa estiver aberto. Toda vez que um vencedor for detectado, o placar deve ser atualizado e exibido no próximo turno.
+   * **O Aprendizado:** Você entenderá como manter dados consistentes em aplicações que possuem múltiplos ciclos de execução.
+
 2. **🤖 Modo Single Player:** Tente fazer a máquina bloquear suas jogadas em vez de apenas jogar aleatoriamente.
 3. **🎨 Cores no Terminal:** Utilize a biblioteca `colorama` para colorir o **"X"** de vermelho e o **"O"** de azul.
 
