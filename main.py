@@ -1,5 +1,5 @@
 """
-❌⭕ PROJETO: JOGO DA VELHA (TIC-TAC-TOE)
+❌⭕ PROJETO: JOGO DA VELHA (TIC TAC TOE)
 🎯 Objetivo: Educacional - Prática de Lógica, Matrizes e Orientação a Objetos.
 
 ESTRUTURA DO CÓDIGO (BASEADA EM CLASSE):
