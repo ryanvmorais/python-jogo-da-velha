@@ -21,13 +21,13 @@ Este exercício foi estruturado para consolidar conceitos essenciais de algoritm
 ---
 ### 🧠 Guia de Implementação: A Lógica por trás do Código
 Para quem está começando, o maior desafio não é a sintaxe, mas a **montagem do raciocínio**. Confira o passo a passo da construção deste jogo:
-1. **Abstração e Modelagem:** Pense no tabuleiro como uma matriz 3x3 (lista de listas). O computador precisa de uma estrutura que armazene se cada "quadradinho" está vazio, com 'X' ou com 'O'.
-2. **UX e Fluxo de Jogo:** O jogo funciona em ciclos. O usuário digita as coordenadas (linha e coluna), o sistema valida, atualiza o tabuleiro e limpa a tela (usando `subprocess`) para manter o visual organizado.
-3. **Estrutura Técnica:** Utilizamos **Programação Orientada a Objetos (POO)** para encapsular o estado do jogo e o módulo `subprocess` para interagir com o Windows/Linux, garantindo que o console seja limpo a cada turno.
-4. **Inicialização:** O jogo começa com o método `reiniciar_jogo()` que gera o tabuleiro preenchido com espaços vazios e limpa as variáveis de controle.
-5. **Algoritmo de Vitória:** Criamos uma lógica (`verificar_vitoria_ou_empate`) que percorre as 3 linhas, 3 colunas e 2 diagonais. Se três símbolos iguais forem encontrados, temos um vencedor.
-6. **O "Game Loop":** Um loop `while True` coordena tudo: exibe tabuleiro -> `jogada_do_usuario` -> verifica vitória -> `jogada_da_maquina` -> verifica vitória -> repete.
-7. **Tratamento de Erros:** Usamos `try/except` para garantir que, se o usuário digitar uma letra ou um número inválido, o programa não feche abruptamente.
+1. **Abstração e Modelagem:** Imagine o tabuleiro como uma matriz 3x3. No Python, usamos uma **lista de listas** para representar isso, permitindo acessar cada quadrado através de coordenadas como `tabuleiro[0][1]`.
+2. **UX e Fluxo de Jogo:** O jogo funciona em ciclos. O usuário interage via terminal, o sistema valida a jogada e utiliza o módulo `subprocess` para limpar a tela, criando a sensação de um aplicativo dinâmico e organizado.
+3. **Arquitetura com POO:** Utilizamos **Programação Orientada a Objetos (POO)** para para organizar o código. A classe `JogoDaVelha` centraliza toda a lógica e armazena o "estado" da partida (quem venceu, de quem é a vez e como está o tabuleiro).
+4. **Inicialização:** Todo início (ou reinício) de partida limpa as variáveis de controle e gera um novo tabuleiro preenchido apenas com espaços vazios (`' '`).
+5. **Algoritmo de Vitória:** Desenvolvemos uma lógica matemática que varre as **8 possibilidades de vitória**: 3 linhas, 3 colunas e 2 diagonais. Se três símbolos iguais forem detectados em sequência, o jogo identifica o vencedor.
+6. **O "Game Loop":** O coração do projeto é um loop `while True`. Ele coordena a orquestra: `desenha o tabuleiro` -> `processa jogada do usuário` -> `verifica vitória` -> `processa jogada aleatória da máquina` -> `verifica vitória` -> `repete`.
+7. **Tratamento de Erros:**  Implementamos blocos `try/except` para que o programa não quebre caso o usuário digite algo inesperado (como letras em vez de números), garantindo uma experiência estável.
 
 ---
 
