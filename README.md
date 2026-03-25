@@ -66,7 +66,14 @@ Para garantir que o jogo funcione corretamente, certifique-se de ter os seguinte
    ```
 > **Nota:** O jogo detectará automaticamente se você está no `Windows`, `Linux` ou `macOS` para gerenciar a limpeza da tela.
 ---
+### ▶️ Execução Simplificada (Atalhos):
+Para facilitar o acesso de quem está começando, adicionei scripts de inicialização automática. Basta baixar o projeto e:
+   * **No Windows:** Dê dois cliques no arquivo `iniciar_jogo.bat`.
+   * **No Linux/macOS:** Execute o arquivo `iniciar_jogo.sh` no terminal.
 
+*Esses scripts verificam automaticamente se você tem o Python instalado antes de iniciar a partida.*
+
+---
 ### 📋 Atividade para praticar:
 
 Para exercitar o que aprendeu, tente modificar o código e implementar estas novas funcionalidades:
