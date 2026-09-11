@@ -16,7 +16,7 @@ Este exercício foi estruturado para consolidar conceitos essenciais de algoritm
 *   **Estruturas Condicionais:** Validação de jogadas e regras do jogo (`if/elif/else`).
 *   **Manipulação de Matrizes:** Como gerenciar dados usando índices `[linha][coluna]`.
 *   **POO (Orientada a Objetos):** Organização de código modular, limpo e reutilizável.
-*   **Interação Multiplataforma com o SO:** Uso do módulo `subprocess` em conjunto com `os.name` para detectar o sistema operacional em tempo real e executar o comando de limpeza de tela correto (`cls` no Windows ou `clear` em sistemas Unix/Mac).
+*   **Interação Multiplataforma com o SO:** Uso do módulo `os` (`os.system` em conjunto com `os.name`) para detectar o sistema operacional em tempo real e executar o comando de limpeza de tela correto (`cls` no Windows ou `clear` em sistemas Unix/Mac).
 
 ---
 ### 🧠 Guia de Implementação (A Lógica por trás do Código):
@@ -26,7 +26,7 @@ Para quem está começando, o maior desafio não é a sintaxe, mas a **montagem 
 3. **Arquitetura com POO:** Utilizamos **Programação Orientada a Objetos (POO)** para para organizar o código. A classe `JogoDaVelha` centraliza toda a lógica e armazena o "estado" da partida (quem venceu, de quem é a vez e como está o tabuleiro).
 4. **Inicialização:** Todo início (ou reinício) de partida limpa as variáveis de controle e gera um novo tabuleiro preenchido apenas com espaços vazios (`' '`).
 5. **Algoritmo de Vitória:** Desenvolvemos uma lógica matemática que varre as **8 possibilidades de vitória**: 3 linhas, 3 colunas e 2 diagonais. Se três símbolos iguais forem detectados em sequência, o jogo identifica o vencedor.
-6. **O "Game Loop":** O coração do projeto é um loop `while True`. Ele coordena a orquestra: `desenha o tabuleiro` -> `processa jogada do usuário` -> `verifica vitória` -> `processa jogada aleatória da máquina` -> `verifica vitória` -> `repete`.
+6. **O "Game Loop":** O coração do projeto é a função `main()`. Ela coordena a orquestra: `desenha o tabuleiro` -> `processa jogada do usuário` -> `verifica vitória` -> `processa jogada aleatória da máquina` -> `verifica vitória` -> `repete`.
 7. **Tratamento de Erros:**  Implementamos blocos `try/except` para que o programa não quebre caso o usuário digite algo inesperado (como letras em vez de números), garantindo uma experiência estável.
 
 ---
@@ -38,6 +38,9 @@ Para garantir a melhor experiência de aprendizado e a execução correta de tod
 | Ferramenta | Descrição | Badge |
 | :--- | :--- | :--- |
 | **Python 3** | Linguagem principal utilizada no desenvolvimento do algoritmo. | ![Linguagem Python](https://img.shields.io/badge/-Python-3776AB%3Fstyle%3Dflat%26logo%3Dpython?logo=python&logoColor=3776AB&logoSize=flat&color=F0F0F0) |
+| **uv** | Gerenciador de ambiente e dependências (substitui `pip` + `venv`). | ![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat&logo=uv&logoColor=white) |
+| **pytest** | Framework de testes automatizados usado em `tests/test_main.py`. | ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white) |
+| **Ruff / Black / Mypy** | Lint, formatação e checagem de tipos (portão de qualidade do projeto). | ![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=flat&logo=ruff&logoColor=black) |
 | **Terminal** | Interface onde o jogo é executado e processa as entradas do usuário. | ![Terminal](https://img.shields.io/badge/Terminal-241F31?style=flat&logo=gnometerminal&logoColor=241F31&color=F0F0F0) |
 | **VS Code / PyCharm** | IDEs recomendadas para edição, depuração e refatoração do arquivo `main.py`. | ![PyCharm](https://img.shields.io/badge/PyCharm-pycharm?style=flat&logo=pycharm&logoColor=000000&color=F0F0F0) |
 
@@ -47,7 +50,8 @@ Para garantir a melhor experiência de aprendizado e a execução correta de tod
 
 Para garantir que o jogo funcione corretamente, certifique-se de ter os seguintes itens instalados:
 
-- **Python 3.10 ou superior:** O código utiliza recursos modernos da linguagem.
+- **Python 3.12 ou superior:** O código utiliza recursos modernos da linguagem.
+- **[uv](https://docs.astral.sh/uv/) (recomendado):** Gerencia o ambiente e as ferramentas de desenvolvimento automaticamente. Sem ele, o jogo ainda roda com `python main.py` puro (o jogo em si não tem nenhuma dependência externa).
 - **VS Code / PyCharm (Opcional):** Recomendado para abrir e editar o arquivo `main.py` com suporte total a refatoração e depuração.
 
 > **Dica:** Para verificar sua versão do Python, digite `python --version` no seu terminal.
@@ -62,8 +66,10 @@ Para garantir que o jogo funcione corretamente, certifique-se de ter os seguinte
 2. **Execute o script:**
 - Navegue até a **pasta do projeto** e utilize o comando abaixo no seu terminal (CMD, PowerShell ou Terminal do VS Code/PyCharm):
    ```bash
-   python main.py
+   uv run main.py
    ```
+   Sem o `uv` instalado, `python main.py` funciona igual — o jogo não tem
+   nenhuma dependência externa, só a biblioteca padrão do Python.
 > **Nota:** O jogo detectará automaticamente se você está no `Windows`, `Linux` ou `macOS` para gerenciar a limpeza da tela.
 ---
 ### ▶️ Execução Simplificada (Atalhos):
@@ -71,7 +77,29 @@ Para facilitar o acesso de quem está começando, adicionei scripts de inicializ
    * **No Windows:** Dê dois cliques no arquivo `iniciar_jogo.bat`.
    * **No Linux/macOS:** Execute o arquivo `iniciar_jogo.sh` no terminal.
 
-*Esses scripts verificam automaticamente se você tem o Python instalado antes de iniciar a partida.*
+*Esses scripts detectam automaticamente se você tem `uv` (preferido) ou `python`/`python3` instalado antes de iniciar a partida.*
+
+---
+
+### 🧪 Testes e qualidade:
+
+O projeto tem uma suíte de testes automatizados (`pytest`) e um portão de
+qualidade que roda no CI a cada push/PR:
+
+```bash
+uv sync              # instala o grupo de desenvolvimento (ruff, black, mypy, pytest)
+uv run pytest        # roda a suíte de testes
+uv run ruff check .  # lint
+uv run black --check .  # formatação
+uv run mypy          # checagem de tipos
+```
+
+> Para quem quer entender o raciocínio por trás de cada ferramenta da stack,
+> veja [`docs/stack.md`](docs/stack.md). Para o detalhamento completo do
+> comportamento do jogo (requisitos, design, decisões), veja
+> [`specs/001-jogo-da-velha/`](specs/001-jogo-da-velha/requirements.md).
+> Para orientações de desenvolvimento voltadas a um agente de IA trabalhando
+> neste repositório, veja [`CLAUDE.md`](CLAUDE.md).
 
 ---
 ### 📋 Atividade para praticar:

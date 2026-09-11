@@ -14,13 +14,17 @@ Este repositório é um espaco para aprendizado de Python, Matrizes e Orientaç�
 1.  Faca o **Fork** do projeto para sua conta.
 2.  Crie uma branch para sua funcionalidade: `git checkout -b feature/melhoria-ia`.
 3.  Realize seus commits usando **Conventional Commits** (sem acentos).
-4.  Envie suas alterações: `git push origin feature/melhoria-ia`.
-5.  Abra um **Pull Request** detalhando sua mudança.
+4.  Antes de abrir o PR, rode a suíte de testes e o portão de qualidade —
+    veja [README → Testes e qualidade](README.md#-testes-e-qualidade). O
+    mesmo roda automaticamente no CI a cada PR.
+5.  Envie suas alterações: `git push origin feature/melhoria-ia`.
+6.  Abra um **Pull Request** detalhando sua mudança.
 
 ## 📜 Diretrizes de Qualidade:
 - O código deve seguir o estilo de **Programação Orientada a Objetos** já estabelecido na classe `JogoDaVelha`.
 - Utilize apenas a **Biblioteca Padrão do Python**, a menos que a nova funcionalidade exija algo muito específico (como cores).
 - O foco é sempre a **clareza para o iniciante**.
+- Toda mudança de comportamento deve vir com o teste correspondente em `tests/test_main.py`.
 
 ---
 Atenciosamente,  

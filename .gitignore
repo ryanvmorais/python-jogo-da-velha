@@ -12,6 +12,12 @@ node_modules/
 npm-debug.log*
 yarn-error.log*
 
+# --- CACHES DE FERRAMENTAS ---
+# Recriáveis a qualquer momento pela própria ferramenta; não agregam nada versionados.
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
 # --- SEGURANÇA E PRIVACIDADE (EXTREMAMENTE IMPORTANTE) ---
 # Arquivos de variáveis de ambiente (onde ficam suas senhas/tokens)
 .env

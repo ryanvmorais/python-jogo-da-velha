@@ -1,0 +1,29 @@
+# Dependabot version updates — consumido pelo GitHub, sem CI proprio. Abre PRs
+# de atualizacao de rotina; separado das security updates (Dependabot alerts,
+# ligadas em Settings > Security do repo, que nao precisam deste arquivo).
+version: 2
+updates:
+  # Ferramentas de dev do pyproject.toml, grafo travado no uv.lock.
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+    labels:
+      - "dependencies"
+
+  # Actions pinadas nos workflows em .github/workflows/.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(ci)"
+    labels:
+      - "dependencies"
