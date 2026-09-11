@@ -1,0 +1,48 @@
+# Pipeline de CI (GitHub Actions). Espelha o portao de qualidade local
+# (ruff -> black --check -> mypy -> pytest) para que um check verde no PR
+# signifique o mesmo que um clone limpo passando.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancela runs obsoletos do mesmo ref: um push novo no PR mata o run anterior.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  qualidade:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Instala o uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+
+      - name: Sincroniza o ambiente (runtime + grupo dev)
+        run: uv sync --frozen
+
+      - name: Ruff (lint + ordem de imports)
+        run: uv run ruff check .
+
+      - name: Black (formatacao)
+        run: uv run black --check .
+
+      - name: Mypy (tipos)
+        run: uv run mypy
+
+      - name: Pytest (suite completa)
+        run: uv run pytest
