@@ -118,6 +118,18 @@ O desafio é criar um contador que não zere ao reiniciar uma partida.
 
 ---
 
+### 🎮 Continue praticando
+
+Este projeto faz parte de uma série de exercícios de lógica de programação em Python. Depois deste, experimente:
+
+* **[Jogo da Cobrinha em Python](https://github.com/ryanvmorais/python-jogo-da-cobrinha):** Listas dinâmicas e game loop com `curses`.
+* **[Calculadora Simples em Python](https://github.com/ryanvmorais/python-calculadora-simples):** Dicionários e tratamento de erros.
+* **[Pedra, Papel e Tesoura em Python](https://github.com/ryanvmorais/python-pedra-papel-tesoura):** Dicionários e POO.
+
+Veja todos os projetos e vídeos do canal em [aprenda-com-ryan-morais](https://github.com/ryanvmorais/aprenda-com-ryan-morais).
+
+---
+
 ### 💡 Ficou com alguma dúvida ou tem sugestões?
 
 Aprender algo novo tem seus desafios, mas estou aqui para caminharmos juntos! Se você encontrou algum erro, teve dificuldade em rodar o jogo ou pensou em uma funcionalidade incrível para adicionar:
