@@ -1,4 +1,4 @@
-![Jogo da Velha em Python - Lógica de Programação e Matrizes](https://github.com/ryanvmorais/python-jogo-da-velha/blob/main/assets/jogo-da-velha-python-logica-programacao.png?raw=true)
+![Jogo da Velha em Python - captura real do terminal com uma partida vencida por X](https://github.com/ryanvmorais/python-jogo-da-velha/blob/main/assets/jogo-da-velha-terminal.svg?raw=true)
 
 # ❌⭕ Jogo da Velha em Python | Exercício de Lógica de Programação
 
