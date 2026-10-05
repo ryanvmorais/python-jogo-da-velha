@@ -52,7 +52,7 @@ pyproject.toml        # gerenciado por uv — sem deps de runtime, grupo dev com
 uv.lock               # lock do grupo dev — nunca editar à mão
 .github/
   workflows/ci.yml    # ruff -> black --check -> mypy -> pytest, em push/PR
-  dependabot.yml      # PRs semanais de atualização (uv + github-actions)
+  dependabot.yml      # PRs aos domingos, agrupados por ecossistema (uv + github-actions)
   ISSUE_TEMPLATE/     # formulário de dúvida, erro ou sugestão (+ config.yml sem issue em branco)
   pull_request_template.md  # corpo padrão do PR: o quê/por quê e "Closes #N"
 ```
