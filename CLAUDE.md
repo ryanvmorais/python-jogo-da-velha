@@ -80,7 +80,7 @@ partidas e o prompt de replay. Detalhamento completo (RF-NN, ADRs) em
 
 Sequência do portão, sempre nesta ordem: `ruff check .` → `black --check .`
 → `mypy` → `pytest`. O `.github/workflows/ci.yml` roda exatamente essa
-sequência (Python 3.12 e 3.13) em todo push na `main` e em todo PR — um
+sequência (Python 3.12, o piso, e 3.14) em todo push na `main` e em todo PR — um
 check verde no PR significa o mesmo que um clone limpo passando.
 
 Sem hooks de `.claude/` neste projeto (repositório pequeno demais para
