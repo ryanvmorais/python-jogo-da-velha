@@ -1,6 +1,9 @@
 # Dependabot version updates — consumido pelo GitHub, sem CI proprio. Abre PRs
 # de atualizacao de rotina; separado das security updates (Dependabot alerts,
 # ligadas em Settings > Security do repo, que nao precisam deste arquivo).
+# Agenda: domingo, 09:00 (America/Sao_Paulo). Cada ecossistema abre um unico PR
+# agrupado com os bumps minor e patch; um major continua em PR proprio. As
+# security updates seguem o ritmo dos alertas e ignoram esta agenda.
 version: 2
 updates:
   # Ferramentas de dev do pyproject.toml, grafo travado no uv.lock.
@@ -8,22 +11,36 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
+      day: "sunday"
+      time: "09:00"
+      timezone: "America/Sao_Paulo"
     open-pull-requests-limit: 5
     commit-message:
       prefix: "chore(deps)"
       prefix-development: "chore(deps-dev)"
     labels:
       - "dependencies"
+    groups:
+      uv-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
 
   # Actions pinadas nos workflows em .github/workflows/.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
+      day: "sunday"
+      time: "09:00"
+      timezone: "America/Sao_Paulo"
     open-pull-requests-limit: 5
     commit-message:
       prefix: "chore(ci)"
     labels:
       - "dependencies"
+    groups:
+      github-actions-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
