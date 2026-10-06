@@ -23,7 +23,7 @@ main.py  ──►  biblioteca padrão do Python (random, os)
 ### Python 3.12+
 
 A única linguagem do projeto. 3.12 é o piso porque é a versão mínima usada nos
-outros projetos do Ryan (`hub-ryan-morais`, `webvigil`, `pedra-papel-tesoura`)
+outros projetos do Ryan (`site-ryan-morais`, `webvigil`, `pedra-papel-tesoura`)
 — manter o mesmo piso evita "funciona num projeto e não no outro" por causa de
 sintaxe.
 
