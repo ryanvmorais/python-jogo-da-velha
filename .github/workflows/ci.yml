@@ -1,6 +1,9 @@
 # Pipeline de CI (GitHub Actions). Espelha o portao de qualidade local
 # (ruff -> black --check -> mypy -> pytest) para que um check verde no PR
 # signifique o mesmo que um clone limpo passando.
+#
+# As Actions ficam fixadas pelo SHA do commit, com a versao no comentario: uma tag
+# pode ser movida depois de publicada, o SHA nao. O Dependabot atualiza os dois juntos.
 name: CI
 
 on:
@@ -19,15 +22,19 @@ permissions:
 jobs:
   qualidade:
     runs-on: ubuntu-26.04
+    # Um run leva poucos minutos; o teto evita que um job travado gaste a cota.
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.12", "3.14"]
+        # 3.12 e o piso (requires-python); 3.14 e 3.15 sao as estaveis mais novas.
+        python-version: ["3.12", "3.14", "3.15"]
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout do repositorio
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Instala o uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7.6.0
         with:
           python-version: ${{ matrix.python-version }}
           enable-cache: true
