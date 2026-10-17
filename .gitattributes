@@ -1,0 +1,4 @@
+# Atalhos de shell rodam em Linux/macOS: fim de linha LF sempre, mesmo num checkout
+# no Windows com core.autocrlf=true. Com CRLF o shebang vira "bash\r" e o script
+# falha ("bad interpreter" ou "$'\r': command not found").
+*.sh text eol=lf
