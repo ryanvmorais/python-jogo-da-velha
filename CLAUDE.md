@@ -54,12 +54,12 @@ uv.lock               # lock do grupo dev — nunca editar à mão
 CODE_OF_CONDUCT.md    # Contributor Covenant 2.1 (pt-BR); contato: contato@ryanmorais.com.br
 SECURITY.md           # política de segurança; relatos pelo Private Vulnerability Reporting
 .github/
-  workflows/ci.yml    # ruff -> black --check -> mypy -> pytest, em push/PR; Actions fixadas por SHA
-  workflows/codeql.yml # CodeQL (Python): push/PR na main e 1x por semana
-  workflows/pip-audit.yml # pip-audit sobre o uv.lock: segunda 09:00 (São Paulo) e à mão
-  dependabot.yml      # PRs aos domingos, agrupados por ecossistema (uv + github-actions), cooldown de 7 dias
-  ISSUE_TEMPLATE/     # formulário de dúvida, erro ou sugestão (+ config.yml sem issue em branco)
-  pull_request_template.md  # corpo padrão do PR: o quê/por quê e "Closes #N"
+  workflows/ci.yml         # ruff -> black --check -> mypy -> pytest, em push/PR; Actions fixadas por SHA
+  workflows/codeql.yml     # CodeQL (Python): push/PR na main e 1x por semana
+  workflows/pip-audit.yml  # pip-audit sobre o uv.lock: segunda 09:00 (São Paulo) e à mão
+  dependabot.yml           # PRs aos domingos, agrupados por ecossistema (uv + github-actions), cooldown de 7 dias
+  ISSUE_TEMPLATE/          # formulário de dúvida, erro ou sugestão (+ config.yml sem issue em branco)
+  pull_request_template.md # corpo padrão do PR: o quê/por quê e "Closes #N"
 ```
 
 ### `JogoDaVelha` (em `main.py`)
