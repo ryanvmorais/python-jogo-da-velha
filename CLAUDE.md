@@ -43,6 +43,7 @@ uv lock --upgrade-package <pacote>
 main.py              # classe JogoDaVelha + função main() (ponto de entrada)
 tests/test_main.py   # suíte pytest (20 casos)
 docs/stack.md         # o que cada peça da stack faz e por quê
+assets/               # captura do terminal (SVG) usada no cabeçalho do README
 specs/                # spec-driven development (ver specs/README.md)
   001-jogo-da-velha/
 iniciar_jogo.bat      # atalho Windows: uv run main.py (fallback: python main.py)
@@ -51,6 +52,8 @@ pyproject.toml        # gerenciado por uv — sem deps de runtime, grupo dev com
                        # ruff/black/mypy/pytest
 uv.lock               # lock do grupo dev — nunca editar à mão
 .gitattributes        # LF fixo nos atalhos .sh (com CRLF o shebang quebra no Linux/macOS)
+LICENSE               # MIT
+CONTRIBUTING.md       # como contribuir: fork, Conventional Commits, portão de qualidade
 CODE_OF_CONDUCT.md    # Contributor Covenant 2.1 (pt-BR); contato: contato@ryanmorais.com.br
 SECURITY.md           # política de segurança; relatos pelo Private Vulnerability Reporting
 .github/
