@@ -30,7 +30,7 @@ Este exercício foi estruturado para consolidar conceitos essenciais de algoritm
 ### 🧠 Guia de Implementação (A Lógica por trás do Código):
 Para quem está começando, o maior desafio não é a sintaxe, mas a **montagem do raciocínio**. Confira o passo a passo da construção deste jogo:
 1. **Abstração e Modelagem:** Imagine o tabuleiro como uma matriz 3x3. No Python, usamos uma **lista de listas** para representar isso, permitindo acessar cada quadrado através de coordenadas como `tabuleiro[0][1]`.
-2. **UX e Fluxo de Jogo:** O jogo funciona em ciclos. O usuário interage via terminal, o sistema valida a jogada e utiliza o módulo `subprocess` para limpar a tela, criando a sensação de um aplicativo dinâmico e organizado.
+2. **UX e Fluxo de Jogo:** O jogo funciona em ciclos. O usuário interage via terminal, o sistema valida a jogada e utiliza `os.system` para limpar a tela, criando a sensação de um aplicativo dinâmico e organizado.
 3. **Arquitetura com POO:** Utilizamos **Programação Orientada a Objetos (POO)** para para organizar o código. A classe `JogoDaVelha` centraliza toda a lógica e armazena o "estado" da partida (quem venceu, de quem é a vez e como está o tabuleiro).
 4. **Inicialização:** Todo início (ou reinício) de partida limpa as variáveis de controle e gera um novo tabuleiro preenchido apenas com espaços vazios (`' '`).
 5. **Algoritmo de Vitória:** Desenvolvemos uma lógica matemática que varre as **8 possibilidades de vitória**: 3 linhas, 3 colunas e 2 diagonais. Se três símbolos iguais forem detectados em sequência, o jogo identifica o vencedor.
@@ -143,6 +143,7 @@ Veja todos os projetos e vídeos do canal em [aprenda-com-ryan-morais](https://g
 Aprender algo novo tem seus desafios, mas estou aqui para caminharmos juntos! Se você encontrou algum erro, teve dificuldade em rodar o jogo ou pensou em uma funcionalidade incrível para adicionar:
 
 *   **Abra uma [Issue](https://github.com/ryanvmorais/python-jogo-da-velha/issues):** Clique no link e descreva sua dúvida ou sugestão. É a melhor forma de trocarmos conhecimento e ajudarmos outras pessoas que tenham a mesma dúvida!
+*   **Contribua com código:** Quer propor uma melhoria? Veja o passo a passo no [CONTRIBUTING.md](CONTRIBUTING.md).
 *   **Me mande um E-mail:** Se preferir algo mais privado, pode me escrever em [**contato@ryanmorais.com.br**](mailto:contato@ryanmorais.com.br).
 
 Ficarei muito feliz em ver seu progresso e receber seu feedback para melhorar cada vez mais nossos materiais de estudo! 🤝

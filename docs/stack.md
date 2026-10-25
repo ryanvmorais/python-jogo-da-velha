@@ -13,7 +13,7 @@ runtime (só a biblioteca padrão do Python), com um grupo de ferramentas de
 qualidade por fora.
 
 ```
-main.py  ──►  biblioteca padrão do Python (random, os)
+main.py  ──►  biblioteca padrão do Python (os, random, sys)
 ```
 
 ---
